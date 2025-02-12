@@ -44,11 +44,11 @@ const MyQueries = () => {
                 </div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
-                        <Link to="/post"><button className="btn text-base-200 bg-cyan-800 hover:bg-cyan-900/80">Post Your Query</button></Link>
+                        <Link to="/post"><button className="btn dark:text-gray-300/80 text-base-200 bg-cyan-800 hover:bg-cyan-900/80">Post Your Query</button></Link>
                     </div>
                 </div>
             </div>
-            <h1 className="my-8 md:my-20 text-cyan-800  text-center text-2xl md:text-4xl font-bold underline"
+            <h1 className="my-8 md:my-20 text-cyan-800 dark:text-gray-300/80 text-center text-2xl md:text-4xl font-bold underline"
             >Posted Query of &quot;{user.displayName ? user.displayName : user.email.split("@")[0]}&quot;</h1>
             <div className="flex justify-between md:w-11/12 mx-auto">
                 <h1>Total Posted : {myPostedQueries.length}</h1>

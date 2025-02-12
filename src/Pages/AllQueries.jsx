@@ -25,7 +25,7 @@ const AllQueries = () => {
 
     return (
         <div>
-            <h1 className="my-8 md:my-20 text-cyan-800  text-center text-2xl md:text-4xl font-bold underline">All Posted Query</h1>
+            <h1 className="my-8 md:my-20 text-cyan-800 dark:text-gray-300/80 text-center text-2xl md:text-4xl font-bold underline">All Posted Query</h1>
             <div className="flex mt-8 justify-between md:w-11/12 xl:w-11/12 mx-auto">
                 <h1 className="text-xl text-gray-600"></h1>
                 <div className="flex gap-2">

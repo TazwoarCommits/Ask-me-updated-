@@ -32,12 +32,12 @@ const RecommendedForMe = () => {
                         {
                             recForMe === 0 ?
 
-                                <h2 className="my-8 md:my-20 text-center text-2xl md:text-4xl font-bold text-cyan-800 ">No Recommendation</h2>
+                                <h2 className="my-8 md:my-20 text-center text-2xl md:text-4xl font-bold text-cyan-800 dark:text-gray-300/80">No Recommendation</h2>
 
                                 :
 
                                 <div>
-                                    <h2 className="my-8 md:my-20 text-center text-2xl md:text-4xl font-bold text-cyan-800 ">Others Recommendations For You</h2>
+                                    <h2 className="my-8 md:my-20 text-center text-2xl md:text-4xl font-bold text-cyan-800 dark:text-gray-300/80">Others Recommendations For You</h2>
                                     <div className="overflow-x-auto">
                                         <table className="table">
                                             {/* head */}

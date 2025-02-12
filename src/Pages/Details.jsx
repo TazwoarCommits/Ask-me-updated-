@@ -120,7 +120,7 @@ const Details = () => {
                     <div className="mb-6">
                         <textarea className="textarea resize-none w-full h-32 border-cyan-800/80" placeholder="Reason For Recommendation" name="reason"></textarea>
                     </div>
-                    <button className="btn btn-block bg-cyan-800/80 hover:bg-cyan-800 text-base-100">Recommend</button>
+                    <button className="btn btn-block bg-cyan-800/80 hover:bg-cyan-800 text-base-100 dark:text-gray-300/80">Recommend</button>
                 </form>
         </div>
     );

@@ -5,7 +5,7 @@ import Navbar from "../Components/Shared/Navbar";
 
 const MainLayOut = () => {
     return (
-        <div className="font-poppins ">
+        <div className="font-poppins">
             <nav className="w-full bg-cyan-300/15 mx-auto sticky top-0 z-10 backdrop-blur-lg">
                 <Navbar></Navbar>
             </nav>

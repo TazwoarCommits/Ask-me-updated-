@@ -1,11 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext/AuthContext";
 import 'animate.css';
 
 const Navbar = () => {
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+    const { user, logOut } = useContext(AuthContext) ;
 
-    const { user, logOut } = useContext(AuthContext);
+    useEffect(() => {
+      document.documentElement.setAttribute("data-theme", theme);
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      localStorage.setItem("theme", theme);
+    }, [theme]);
+  
+    const handleToggle = () => {
+      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
 
     const links = <>
         <li><Link to='/'>Home</Link></li>
@@ -26,10 +40,10 @@ const Navbar = () => {
 
 
     return (
-        <div className=" md:w-11/12 mx-auto font-poppins navbar text-cyan-900/80 font-semibold px-0">
+        <div className=" md:w-11/12 mx-auto font-poppins navbar font-semibold px-0">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <div tabIndex={0}  className="btn btn-ghost ml-0 pl-0 lg:hidden">
+                    <div tabIndex={0} className="btn btn-ghost ml-0 pl-0 lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -50,15 +64,23 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <Link to="/" ><p className="text-xl  text-cyan-800 font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
+                    <Link to="/" ><p className="text-xl text-cyan-800/80 dark:text-gray-300/80 font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
                 </div>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex text-cyan-800/80 dark:text-white/80">
                 <ul className="flex gap-2 px-1">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end">
+                <div className="flex items-center justify-center">
+                    <button
+                        onClick={()=>handleToggle()}
+                        className="px-4 py-2 bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 rounded-3xl mr-2"
+                    >
+                        {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                    </button>
+                </div>
                 {
                     user ?
                         <div className="flex gap-4">

@@ -34,7 +34,7 @@ const Update = () => {
 
     return (
         <div className="mt-5 flex flex-col justify-center items-center w-10/12 mx-auto my-12 md:my-20">
-        <h2 className="text-3xl text-cyan-800 font-semibold text-center mb-12">Post A New Query</h2>
+        <h2 className="text-3xl text-cyan-800 dark:text-gray-300/80 font-semibold text-center mb-12">Post A New Query</h2>
         <form onSubmit={handleUpdate} className="w-11/12">
             <div className="md:flex space-y-4 md:space-y-0 gap-4 mb-6">
                 <label className="mb:4 input border-cyan-800/80  flex items-center gap-2 w-full">
@@ -57,7 +57,7 @@ const Update = () => {
             <div className="mb-6">
                 <textarea className="textarea resize-none w-full h-32 border-cyan-800/80" placeholder="Any Reason For Avoiding" defaultValue={reason} name="reason"></textarea>
             </div>
-            <button className="btn btn-block bg-cyan-800/80 hover:bg-cyan-800 text-base-100">Update</button>
+            <button className="btn btn-block bg-cyan-800/80 dark:text-gray-300/80 hover:bg-cyan-800 text-base-100">Update</button>
         </form>
     </div>
     );

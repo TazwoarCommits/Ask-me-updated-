@@ -24,7 +24,7 @@ const MyRecommendations = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center my-8 md:my-12 text-2xl md:text-4xl text-cyan-800 ">My Recommendations : {myRec.length}</h1>
+                <h1 className="text-center my-8 md:my-12 text-2xl md:text-4xl text-cyan-800 dark:text-gray-300/80 ">My Recommendations : {myRec.length}</h1>
             </div>
             {
                 loading ? <div className="flex justify-center items-center">
